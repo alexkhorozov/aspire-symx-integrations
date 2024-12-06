@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:common="http://www.symxchange.generated.symitar.com/common/dto/common" xmlns:episysinformationdto="http://www.symxchange.generated.symitar.com/episysinformation/dto" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.symxchange.generated.symitar.com/episysinformation" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EpisysInformationService" targetNamespace="http://www.symxchange.generated.symitar.com/episysinformation">
+<wsdl:documentation>Copyright 2015 Jack Henry Software</wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.symxchange.generated.symitar.com/episysinformation">
+			<xsd:import namespace="http://www.symxchange.generated.symitar.com/common/dto/common" schemaLocation="http://10.24.69.24:8088/SymXchange/2020.01/episysinformation?xsd=xsd/common.xsd"/>
+ 			<xsd:import namespace="http://www.symxchange.generated.symitar.com/episysinformation/dto" schemaLocation="http://10.24.69.24:8088/SymXchange/2020.01/episysinformation?xsd=xsd/episysinformation.xsd"/>
+ 					
+ 			<xsd:element name="getGeneralEpisysInformation">
+ 				<xsd:complexType>
+ 					<xsd:sequence>
+ 						<xsd:element maxOccurs="1" minOccurs="0" name="Request" type="episysinformationdto:GeneralEpisysInformationRequest"/>
+ 					</xsd:sequence>
+ 				</xsd:complexType>
+ 			</xsd:element>
+ 			<xsd:element name="getGeneralEpisysInformationResponse">
+ 				<xsd:complexType>
+ 					<xsd:sequence>
+ 						<xsd:element maxOccurs="1" minOccurs="0" name="Response" type="episysinformationdto:GeneralEpisysInformationResponse"/>
+ 					</xsd:sequence>
+ 				</xsd:complexType>
+ 			</xsd:element>
+		
+        </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getGeneralEpisysInformationResponse">
+    <wsdl:part element="tns:getGeneralEpisysInformationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getGeneralEpisysInformationRequest">
+    <wsdl:part element="tns:getGeneralEpisysInformation" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="EpisysInformationService">
+    <wsdl:operation name="getGeneralEpisysInformation">
+      <wsdl:input message="tns:getGeneralEpisysInformationRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getGeneralEpisysInformationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EpisysInformationServiceBinding" type="tns:EpisysInformationService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getGeneralEpisysInformation">
+      <soap:operation soapAction="http://www.symxchange.generated.symitar.com/episysinformation/getGeneralEpisysInformation"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EpisysInformationService">
+    <wsdl:port binding="tns:EpisysInformationServiceBinding" name="EpisysInformationServicePort">
+      <soap:address location="http://10.24.69.24:8088/SymXchange/2020.01/episysinformation"/>
+    </wsdl:port>
+  </wsdl:service>
+    <xsd:documentation>Version 1.0</xsd:documentation>
+</wsdl:definitions>
