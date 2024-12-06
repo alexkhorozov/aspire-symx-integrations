@@ -1,2 +1,2 @@
-# aspire-symx-integrations
-.Net Aspire integration to SymXchange
+# .Net Aspire integration to SymXchange
+
