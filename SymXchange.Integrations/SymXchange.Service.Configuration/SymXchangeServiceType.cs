@@ -2,7 +2,7 @@
 /// <summary>
 /// SymXchange Service Enumeration defines SymXchange services available to the SymXchange client
 /// </summary>
-public enum SymXchangeService
+public enum SymXchangeServiceType
 {
     /// <summary>
     /// SymXchange Account service

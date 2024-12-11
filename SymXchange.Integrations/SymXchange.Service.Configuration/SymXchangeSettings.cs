@@ -19,9 +19,10 @@ public class SymXchangeSettings
     /// Initializes a new instance of the <see cref="SymXchangeSettings"/> class using the provided connection string.
     /// </summary>
     /// <param name="connectionString">The connection string to parse and initialize the settings.</param>
-    public SymXchangeSettings(string connectionString)
+    public SymXchangeSettings(string connectionString, SymXchangeServiceType symxServiceType)
     {
         ParseConnectionString(connectionString);
+        Endpoint += symxServiceType.ToString().ToLower();
     }
     /// <summary>
     /// SymXchange Options default constructor
