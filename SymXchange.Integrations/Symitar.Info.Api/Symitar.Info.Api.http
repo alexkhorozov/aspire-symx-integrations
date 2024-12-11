@@ -1,0 +1,5 @@
+@Symitar.Info.Api_HostAddress = https://localhost:7146
+
+GET {{Symitar.Info.Api_HostAddress}}/info
+
+###
