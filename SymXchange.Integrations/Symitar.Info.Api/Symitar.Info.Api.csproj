@@ -17,6 +17,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\SymXchange.Integrations.ServiceDefaults\SymXchange.Integrations.ServiceDefaults.csproj" />
 		<ProjectReference Include="..\SymXchange.Service.Info\SymXchange.Service.Info.csproj" />
 	</ItemGroup>
 
